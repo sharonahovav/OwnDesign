@@ -1,0 +1,19 @@
+{
+  "name": "atelier-mobile-pr-video",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Remotion video and banner for pull request #24 (Atelier mobile web version)",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render:mp4": "remotion render src/index.ts MobileTour out/atelier-mobile.mp4 --codec=h264 --crf=20",
+    "render:gif": "remotion render src/index.ts MobileTeaser out/atelier-mobile.gif --codec=gif --every-nth-frame=3 --scale=0.5",
+    "render:banner": "remotion still src/index.ts Banner out/banner.png --scale=1"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.542",
+    "@remotion/google-fonts": "4.0.542",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.542"
+  }
+}
